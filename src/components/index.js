@@ -9,6 +9,7 @@ import Achievements from "./Achievements";
 import Skills from "./Skills";
 import Contact from "./Contact";
 import CanvasLoader from "./Loader";
+import WordPressProjects from "./WordPressProjects";
 
 
 export {
@@ -25,5 +26,6 @@ export {
   EarthCanvas, 
   BallCanvas, 
   ComputersCanvas, 
-  StarsCanvas
+  StarsCanvas,
+  WordPressProjects
 };

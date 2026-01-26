@@ -158,6 +158,8 @@ const projects = [
     ],
     image: carrent,
     source_code_link: "https://github.com/rgiri5001",
+    details_path: "/wordpress-projects",
+    details_button_label: "View 60+ WordPress builds",
   },
   {
     name: "Tat Vivah — Multi-Vendor Marketplace Backend",
@@ -277,6 +279,81 @@ const projects = [
   },
 ];
 
+const wordpressProjects = [
+  {
+    name: "Samaraha",
+    description: "Logistics and cargo platform with multilingual landing pages and service showcases built on WordPress.",
+    focus: "Logistics",
+    url: "https://samaraha.com/",
+  },
+  {
+    name: "Saurally",
+    description: "Gaming and esports hub built with animated sections, custom event galleries, and easy newsletter capture.",
+    focus: "Entertainment",
+    url: "https://saurally.com/",
+  },
+  {
+    name: "Terrestrialyt",
+    description: "Environmental tech showcase combining media, research highlights, and blog storytelling on WordPress.",
+    focus: "Sustainability",
+    url: "https://terrestrialyt.com/",
+  },
+  {
+    name: "New Saraswati Saree Centre",
+    description: "Premium textile boutique site with regional content, curated catalog, and clean CTA-driven layout.",
+    focus: "Textiles",
+    url: "https://newsaraswatisareecentre.in/",
+  },
+  {
+    name: "Fab Naturals",
+    description: "Beauty and wellness ecommerce experience with product grids, testimonials, and subscription CTAs.",
+    focus: "Ecommerce",
+    url: "https://fabonaturals.com/",
+  },
+  {
+    name: "HMS Fashion Hub",
+    description: "Fashion boutique with editorial hero, lookbooks, and appointment scheduling components.",
+    focus: "Fashion",
+    url: "https://hmsfashionhub.com/",
+  },
+  {
+    name: "Knockorignals",
+    description: "Audio & creative services agency site featuring project case studies and contact utilities.",
+    focus: "Creative",
+    url: "https://knockorignals.com/",
+  },
+  {
+    name: "Shringarika",
+    description: "Ethnic jewelry storefront with rich imagery, collection filters, and curated editorial pages.",
+    focus: "Retail",
+    url: "https://shringarika.in/",
+  },
+  {
+    name: "GajLaxmi Paithani",
+    description: "Handloom couture destination highlighting silk sarees, expertise, and story-driven content blocks.",
+    focus: "Handloom",
+    url: "https://gajlaxmipaithani.com/",
+  },
+  {
+    name: "Luntra",
+    description: "Creative strategy studio with bold visuals, service decks, and a client-first narrative.",
+    focus: "Agency",
+    url: "http://luntra.co.in/",
+  },
+  {
+    name: "Fabkurti",
+    description: "Ready-to-wear kurti brand with quick-add shop links and live WhatsApp call-to-action widgets.",
+    focus: "Apparel",
+    url: "https://fabkurti.in/",
+  },
+  {
+    name: "GRS Hot Blasting",
+    description: "Industrial services page with service rows, certifications, and contact lead forms.",
+    focus: "Industrial",
+    url: "https://grshotblasting.com/",
+  },
+];
+
 const achievements = [
   {
     title: "50+ Live Websites",
@@ -369,4 +446,4 @@ const skills = [
   },
 ];
 
-export { services, experiences, projects, achievements, education, certifications, skills };
+export { services, experiences, projects, wordpressProjects, achievements, education, certifications, skills };

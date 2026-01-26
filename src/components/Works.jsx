@@ -1,6 +1,7 @@
 import React from "react";
 import Tilt from "react-tilt";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 import { styles } from "../styles";
 import { github } from "../assets";
@@ -15,7 +16,10 @@ const ProjectCard = ({
   tags,
   image,
   source_code_link,
+  details_path,
+  details_button_label,
 }) => {
+  const navigate = useNavigate();
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <Tilt
@@ -62,6 +66,18 @@ const ProjectCard = ({
             </p>
           ))}
         </div>
+
+        {details_path && (
+          <div className='mt-6'>
+            <button
+              type='button'
+              onClick={() => navigate(details_path)}
+              className='text-[14px] text-[#9bd8ff] tracking-wide font-semibold uppercase hover:text-white transition-colors'
+            >
+              {details_button_label ?? "Explore WordPress builds"}
+            </button>
+          </div>
+        )}
       </Tilt>
     </motion.div>
   );
