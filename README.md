@@ -23,10 +23,12 @@
 1. 🤖 [Introduction](#introduction)
 2. ⚙️ [Tech Stack](#tech-stack)
 3. 🔋 [Features](#features)
-4. 🤸 [Quick Start](#quick-start)
-5. 🕸️ [Snippets](#snippets)
-6. 🔗 [Links](#links)
-7. 🚀 [More](#more)
+4. 📦 [Tracking Order](#tracking-order)
+5. 🎁 [Wishes](#wishes)
+6. 🤸 [Quick Start](#quick-start)
+7. 🕸️ [Snippets](#snippets)
+8. 🔗 [Links](#links)
+9. 🚀 [More](#more)
 
 ## 🚨 Tutorial
 
@@ -73,6 +75,148 @@ If you're getting started and need assistance or face any bugs, join our active 
 👉 **Responsive Design**: Ensures optimal display and functionality across all devices.
 
 and many more, including code architecture and reusability 
+
+## <a name="tracking-order">📦 Tracking Order</a>
+
+Track shipments from pickup to delivery with an Express + MongoDB API that feeds a Create React App dashboard, including JWT-protected `/api` routes and live status updates for administrators.
+
+### Repository layout
+
+- `Backend/` – Express API, controller/middleware layers, Mongoose models, JWT auth helpers, and server-side tests.
+- `Frontend/admin-dashboard/` – Create React App dashboard styled with scoped CSS modules and routed pages for managing shipments.
+
+### Backend setup
+
+1. `cd Backend`
+2. Copy `.env.example` (if present) or create `.env` with the keys shown below.
+3. Run `npm install` then `npm run dev` to launch the server with nodemon on the default `PORT`.
+
+### Environment variables
+
+- `PORT=3000`
+- `MONGO_URI=your_mongodb_connection_string`
+- `JWT_SECRET=your_random_secret`
+- `FRONTEND_ORIGIN=https://your-frontend.site,https://staging.site` (optional cors restriction)
+
+### Running
+
+- Production: `npm start`
+- Development: `npm run dev` (uses nodemon)
+
+### Frontend setup
+
+1. `cd Frontend/admin-dashboard`
+2. `npm install`
+3. `npm run dev` (or `npm start`) serves on http://localhost:3000 with API proxy to http://localhost:5001.
+
+### Environment variables for production builds
+
+Set `REACT_APP_API_BASE_URL` to the deployed backend base URL (including `/api`) before `npm run build`. Example:
+
+```env
+REACT_APP_API_BASE_URL=https://tracking-order.onrender.com/api
+```
+
+### Running tests
+
+- Backend tests (if configured) live under `Backend/tests`; add a `test` script to `Backend/package.json` as needed.
+- Frontend tests: `npm test` inside `Frontend/admin-dashboard`.
+
+### Deployment notes
+
+- Deploy backend and frontend from their respective folders and update `REACT_APP_API_BASE_URL` to point at the deployed API (`https://<service>.onrender.com/api`).
+- Optionally set `FRONTEND_ORIGIN` on the backend to the dashboard URL for tighter CORS control.
+
+### Additional references
+
+- Backend-specific info: `Backend/README.md`
+- Frontend-specific info: `Frontend/admin-dashboard/README.md`
+
+## <a name="wishes">🎁 Wishes</a>
+
+Wishes keeps birthday planning in one monorepo by bundling a Vite-powered frontend, Express API, and deployment automation so UI, API, and infra stay in sync.
+
+### Architecture
+
+- `frontend/` – React + Vite SPA with context-driven auth, reminders, and contact management.
+- `backend/` – Workspace helpers, shared scripts, and `server/` for the Express API (server.js + src).
+- `render.yaml` – Defines static and dynamic services for Render.com deployments.
+- `package.json` – npm workspace scheduler that lets `npm run dev` spin up both services.
+
+### Getting Started
+
+```bash
+git clone https://github.com/ritesh5001/Wishes.git
+cd Wishes
+npm install
+```
+
+Install the server workspace:
+
+```bash
+npm run install-server
+cp backend/server/.env.example backend/server/.env
+```
+
+Configure MongoDB URI, JWT secret, and allowed origins in `backend/server/.env`.
+
+Configure the frontend:
+
+```bash
+cp frontend/.env.example frontend/.env
+# Set VITE_API_URL to your backend (defaults to http://localhost:3000 in dev).
+```
+
+### Running the Workspaces
+
+- `npm run dev` – runs backend (nodemon) and frontend (Vite dev server) together.
+- `npm run lint` – executes the frontend ESLint configuration.
+- `npm run build` – builds every workspace with a build script (frontend today).
+- `npm start` – starts both workspaces in production mode (`node server.js` + `vite preview`).
+- Run a single workspace with `npm run dev --workspace backend` or `npm run dev --workspace frontend`.
+
+### Environment Configuration
+
+#### Backend (`backend/server/.env`)
+- `NODE_ENV` – `development` or `production`
+- `PORT` – API port (defaults to 3000)
+- `MONGO_URI` – MongoDB connection string
+- `JWT_SECRET` – Signing key for auth tokens
+- `CLIENT_URL` – Allowed origins (comma-separated)
+- `REMINDER_WINDOW_DAYS` – Optional sliding window for reminder lookups
+
+#### Frontend (`frontend/.env`)
+- `VITE_API_URL` – Base URL for the backend API (React app appends `/api`). Defaults to http://localhost:3000 in dev and https://wishes-rhvh.onrender.com in production if unset.
+
+### Deployment
+
+- Render.com is the supported deployment target and honors `render.yaml`.
+- Push the repo to GitHub, create a Render Blueprint, and it will provision frontend + backend services.
+- Set backend env vars (`MONGO_URI`, `JWT_SECRET`, `CLIENT_URL`, `REMINDER_WINDOW_DAYS`) in the Render dashboard.
+- Set `VITE_API_URL` on the frontend service if Render doesn’t auto-populate it.
+
+### API Highlights
+
+- `POST /api/auth/register` – Register new users.
+- `POST /api/auth/login` – Authenticate and receive a JWT.
+- Resource routes under `/api/contacts` and `/api/reminders` manage birthday data (controllers live in `backend/server/src/controllers`).
+- Health endpoints: `GET /` and `GET /health` respond with 200 for probes.
+
+### Tech Stack
+
+- Frontend: React 19, Vite, Tailwind, Framer Motion, React Router, Axios.
+- Backend: Node.js 20+, Express, Mongoose, bcryptjs, jsonwebtoken, helmet, compression, CORS.
+- Deployment: Render via `render.yaml`.
+
+### Contributing
+
+- Fork the repository and create a descriptive branch (`git checkout -b feature/reminder-notes`).
+- Make changes, keep linting/formatting in mind, commit (`git commit -m "feat: add reminder filters"`), push, and open a PR.
+
+### Support
+
+- File issues at https://github.com/ritesh5001/Wishes/issues.
+- Ask quick questions via discussions or GitHub after you have access.
 
 ## <a name="quick-start">🤸 Quick Start</a>
 

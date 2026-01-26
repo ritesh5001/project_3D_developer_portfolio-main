@@ -217,6 +217,64 @@ const projects = [
     image: jobit,
     source_code_link: "https://github.com/rgiri5001/Explore-Fusion",
   },
+  {
+    name: "Tracking Order — Shipment tracking platform",
+    description:
+      "Express + MongoDB API powering a Create React App admin dashboard with JWT-protected /api endpoints and live shipment status updates.",
+    tags: [
+      {
+        name: "express",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "green-text-gradient",
+      },
+      {
+        name: "jwt",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "restapi",
+        color: "green-text-gradient",
+      },
+    ],
+    image: jobit,
+    source_code_link: "https://github.com/ritesh5001/tracking-order",
+  },
+  {
+    name: "Wishes — Birthday wishes studio",
+    description:
+      "Monorepo that keeps the Vite frontend, Express API, and deployment automation aligned for birthday contacts, reminders, and celebratory workflows.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "vite",
+        color: "green-text-gradient",
+      },
+      {
+        name: "express",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "render",
+        color: "green-text-gradient",
+      },
+    ],
+    image: tripguide,
+    source_code_link: "https://github.com/ritesh5001/Wishes",
+  },
 ];
 
 const achievements = [
