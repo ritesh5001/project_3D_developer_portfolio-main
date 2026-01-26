@@ -1,5 +1,5 @@
 import React from "react";
-import Tilt from "react-tilt";
+import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
@@ -15,12 +15,11 @@ const WordPressCard = ({ project, index }) => (
     className='w-full sm:w-[320px]'
   >
     <Tilt
-      options={{
-        max: 35,
-        scale: 1,
-        speed: 500,
-      }}
       className='bg-tertiary p-5 rounded-2xl h-full flex flex-col justify-between'
+      tiltMaxAngleX={35}
+      tiltMaxAngleY={35}
+      transitionSpeed={500}
+      scale={1}
     >
       <div className='flex-1'>
         <p className='text-[12px] text-secondary uppercase tracking-[4px]'>{project.focus}</p>
