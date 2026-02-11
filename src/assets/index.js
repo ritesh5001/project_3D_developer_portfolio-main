@@ -29,6 +29,11 @@ import tesla from "./company/tesla.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import wishes from "./wishes.png";
+import jarvis from "./jarvis.png";
+import tatvivah from "./tatvivah.png";
+import explorefusion from "./explorefusion.png";
+import tracking from "./tracking.png";
 
 export {
   logo,
@@ -59,4 +64,9 @@ export {
   carrent,
   jobit,
   tripguide,
+  wishes,
+  jarvis,
+  tatvivah,
+  explorefusion,
+  tracking,
 };

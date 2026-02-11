@@ -18,28 +18,34 @@ const ProjectCard = ({
   source_code_link,
   details_path,
   details_button_label,
+  live_link,
 }) => {
   const navigate = useNavigate();
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
-        <Tilt
-          className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
-          tiltMaxAngleX={35}
-          tiltMaxAngleY={35}
-          transitionSpeed={450}
-          scale={1}
-        >
+      <Tilt
+        className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
+        tiltMaxAngleX={35}
+        tiltMaxAngleY={35}
+        transitionSpeed={450}
+        scale={1}
+      >
         <div className='relative w-full h-[230px]'>
-          <img
-            src={image}
-            alt='project_image'
-            className='w-full h-full object-cover rounded-2xl'
-          />
+          <div
+            onClick={() => window.open(live_link, "_blank")}
+            className="w-full h-full cursor-pointer"
+          >
+            <img
+              src={image}
+              alt='project_image'
+              className='w-full h-full object-cover rounded-2xl'
+            />
+          </div>
 
-          <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
+          <div className='absolute inset-0 flex justify-end m-3 card-img_hover pointer-events-none'>
             <div
               onClick={() => window.open(source_code_link, "_blank")}
-              className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
+              className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer pointer-events-auto'
             >
               <img
                 src={github}

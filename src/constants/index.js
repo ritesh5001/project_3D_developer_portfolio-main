@@ -7,6 +7,11 @@ import {
   carrent,
   jobit,
   tripguide,
+  wishes,
+  jarvis,
+  tatvivah,
+  explorefusion,
+  tracking,
 } from "../assets";
 
 export const navLinks = [
@@ -110,8 +115,9 @@ const projects = [
         color: "blue-text-gradient",
       },
     ],
-    image: jobit,
+    image: jarvis,
     source_code_link: "https://github.com/ritesh5001/ChatAI",
+    live_link: "https://jarvisai.riteshgiri.dev/",
   },
   {
     name: "Client Delivery Suite",
@@ -162,8 +168,9 @@ const projects = [
         color: "green-text-gradient",
       },
     ],
-    image: tripguide,
+    image: tatvivah,
     source_code_link: "https://github.com/rgiri5001",
+    live_link: "https://www.tatvivahtrends.com/",
   },
   {
     name: "Explore-Fusion — Travel Social & AI Platform",
@@ -191,8 +198,9 @@ const projects = [
         color: "green-text-gradient",
       },
     ],
-    image: jobit,
+    image: explorefusion,
     source_code_link: "https://github.com/ritesh5001/Explore-Fusion",
+    live_link: "https://www.explorefusion.online/",
   },
   {
     name: "Tracking Order — Shipment tracking platform",
@@ -220,8 +228,9 @@ const projects = [
         color: "green-text-gradient",
       },
     ],
-    image: jobit,
+    image: tracking,
     source_code_link: "https://github.com/ritesh5001/tracking-order",
+    live_link: "https://tracking-order-xi.vercel.app/",
   },
   {
     name: "Wishes — Birthday wishes studio",
@@ -249,8 +258,9 @@ const projects = [
         color: "green-text-gradient",
       },
     ],
-    image: tripguide,
+    image: wishes,
     source_code_link: "https://github.com/ritesh5001/Wishes",
+    live_link: "https://smaran-five-ochre.vercel.app/",
   },
 ];
 
