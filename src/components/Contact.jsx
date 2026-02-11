@@ -19,8 +19,8 @@ const contactDetails = [
   },
   {
     label: "LinkedIn",
-    value: "linkedin.com/in/ritesh-kumar-giri-5001",
-    link: "https://www.linkedin.com/in/ritesh-kumar-giri-5001",
+    value: "linkedin.com/in/ritesh5001",
+    link: "https://www.linkedin.com/in/ritesh5001",
   },
   {
     label: "GitHub",

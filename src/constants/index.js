@@ -85,31 +85,6 @@ const experiences = [
       "Owned end-to-end delivery from UI/UX to backend integrations, automation, and hosting for diverse clients.",
     ],
   },
-  {
-    title: "Project Partner",
-    company_name: "Client Portfolio",
-    icon: creator,
-    iconBg: "#E6DEDD",
-    date: "Jan 2024 – Nov 2025",
-    points: [
-      "Delivered 60+ projects for brands such as Shree Cargo Surat, Smaran, Filtxpert, Punjabi Chaap Corner, Saurally, Terrestrialyt, Fabonatural, Shringarika, Knockorginals, and KashmirCart.",
-      "Coordinated requirements, design systems, automations, and quality checks to align with each client’s business goals.",
-      "Implemented data-driven experiences with REST APIs, real-time messaging, and polished UI components.",
-    ],
-  },
-  {
-    title: "AI Developer – JARVIS AI",
-    company_name: "Self-directed",
-    icon: backend,
-    iconBg: "#383E56",
-    date: "Aug 2025 – Sep 2025",
-    points: [
-      "Built a memory-augmented real-time chat assistant with JWT auth, live chat, and Gemini-powered responses.",
-      "Integrated Pinecone for long-term memory and stacked short-term memory for conversation continuity.",
-      "Authored secure Node.js + Express 5 APIs with MongoDB, Mongoose, and Socket.io to power the experience.",
-      "Automated deployments with GitHub Actions and hosted on Render for reliable uptime.",
-    ],
-  },
 ];
 
 const projects = [
