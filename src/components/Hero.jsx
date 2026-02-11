@@ -43,12 +43,20 @@ const Hero = () => {
               WhatsApp
             </a>
             <a
-              href='https://github.com/rgiri5001'
+              href='https://github.com/ritesh5001'
               className='bg-transparent border border-white text-white px-5 py-2 rounded-lg text-sm font-medium transition hover:bg-white hover:text-black'
               target='_blank'
               rel='noreferrer'
             >
               View GitHub
+            </a>
+            <a
+              href='/resume.pdf'
+              className='bg-transparent border border-white text-white px-5 py-2 rounded-lg text-sm font-medium transition hover:bg-white hover:text-black'
+              target='_blank'
+              rel='noreferrer'
+            >
+              Download Resume
             </a>
           </div>
         </div>

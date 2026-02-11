@@ -136,7 +136,7 @@ const projects = [
       },
     ],
     image: jobit,
-    source_code_link: "https://github.com/rgiri5001/jarvis-ai",
+    source_code_link: "https://github.com/ritesh5001/ChatAI",
   },
   {
     name: "Client Delivery Suite",
@@ -157,7 +157,7 @@ const projects = [
       },
     ],
     image: carrent,
-    source_code_link: "https://github.com/rgiri5001",
+    source_code_link: "https://github.com/ritesh5001/Tat_Vivah-Multi-Vendor-Ecom",
     details_path: "/wordpress-projects",
     details_button_label: "View 60+ WordPress builds",
   },
@@ -217,7 +217,7 @@ const projects = [
       },
     ],
     image: jobit,
-    source_code_link: "https://github.com/rgiri5001/Explore-Fusion",
+    source_code_link: "https://github.com/ritesh5001/Explore-Fusion",
   },
   {
     name: "Tracking Order — Shipment tracking platform",
